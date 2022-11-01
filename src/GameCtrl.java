@@ -1,3 +1,5 @@
+import com.sun.tools.javac.Main;
+
 import java.util.Scanner;
 
 public class GameCtrl
@@ -76,9 +78,13 @@ public class GameCtrl
 
 	public static void main(String[] args)
 	{
-		IThinker thinker = chooseType("Thinker") == 1 ? new HumanThinker() : new ComputerThinker();
-		IGuesser guesser = chooseType("Guesser") == 1 ? new HumanGuesser() : new ComputerGuesser();
-		GameCtrl gc = new GameCtrl(0, 100);
-		gc.runGame(thinker, guesser);
+		//IThinker thinker = chooseType("Thinker") == 1 ? new HumanThinker() : new ComputerThinker();
+		//IGuesser guesser = chooseType("Guesser") == 1 ? new HumanGuesser() : new ComputerGuesser();
+		//GameCtrl gc = new GameCtrl(0, 100);
+		//gc.runGame(thinker, guesser);
+		NewFeature nf = new NewFeature();
+		MainFeature mf = new MainFeature();
+		System.out.println(nf);
+		System.out.println(mf);
 	}
 }
